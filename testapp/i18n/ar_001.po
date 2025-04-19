@@ -1,0 +1,202 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* testapp
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-18 16:54+0000\n"
+"PO-Revision-Date: 2025-04-18 16:54+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: testapp
+#: model:ir.model.fields,field_description:testapp.field_my_app__binary
+msgid "Binary"
+msgstr "ملف"
+
+#. module: testapp
+#: model:ir.model.fields,field_description:testapp.field_my_app__create_uid
+#: model:ir.model.fields,field_description:testapp.field_my_order__create_uid
+#: model:ir.model.fields,field_description:testapp.field_my_orders_items__create_uid
+msgid "Created by"
+msgstr "صنع عن طريق"
+
+#. module: testapp
+#: model:ir.model.fields,field_description:testapp.field_my_app__create_date
+#: model:ir.model.fields,field_description:testapp.field_my_order__create_date
+#: model:ir.model.fields,field_description:testapp.field_my_orders_items__create_date
+msgid "Created on"
+msgstr "صنع على"
+
+#. module: testapp
+#: model:ir.model.fields,field_description:testapp.field_my_app__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: testapp
+#: model:ir.model.fields,field_description:testapp.field_my_app__date_time
+#: model:ir.model.fields,field_description:testapp.field_my_order__date_time
+msgid "Date Time"
+msgstr "التاريخ و الوقت"
+
+#. module: testapp
+#: model:ir.model.fields,field_description:testapp.field_my_app__description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: testapp
+#: model:ir.model.fields,field_description:testapp.field_my_app__display_name
+#: model:ir.model.fields,field_description:testapp.field_my_order__display_name
+#: model:ir.model.fields,field_description:testapp.field_my_orders_items__display_name
+msgid "Display Name"
+msgstr "عرض الاسم"
+
+#. module: testapp
+#: model:ir.model,name:testapp.model_my_app
+msgid "Hello World"
+msgstr "مرحبا بالعالم"
+
+#. module: testapp
+#: model:ir.model.fields,field_description:testapp.field_my_app__html
+msgid "Html"
+msgstr ""
+
+#. module: testapp
+#: model:ir.model.fields,field_description:testapp.field_my_app__id
+#: model:ir.model.fields,field_description:testapp.field_my_order__id
+#: model:ir.model.fields,field_description:testapp.field_my_orders_items__id
+msgid "ID"
+msgstr ""
+
+#. module: testapp
+#: model:ir.model.fields,field_description:testapp.field_my_orders_items__itemPrice
+msgid "Itemprice"
+msgstr "سعر الغرض"
+
+#. module: testapp
+#: model:ir.actions.act_window,name:testapp.testapp_item_action_window
+#: model:ir.model.fields,field_description:testapp.field_my_order__items_ids
+#: model:ir.ui.menu,name:testapp.testapp_menu_am_order_item_list
+msgid "Items"
+msgstr "الغرض"
+
+#. module: testapp
+#: model:ir.model.fields,field_description:testapp.field_my_app____last_update
+#: model:ir.model.fields,field_description:testapp.field_my_order____last_update
+#: model:ir.model.fields,field_description:testapp.field_my_orders_items____last_update
+msgid "Last Modified on"
+msgstr "اخر تعديل"
+
+#. module: testapp
+#: model:ir.model.fields,field_description:testapp.field_my_app__write_uid
+#: model:ir.model.fields,field_description:testapp.field_my_order__write_uid
+#: model:ir.model.fields,field_description:testapp.field_my_orders_items__write_uid
+msgid "Last Updated by"
+msgstr "اخر تعديل عن طريق"
+
+#. module: testapp
+#: model:ir.model.fields,field_description:testapp.field_my_app__write_date
+#: model:ir.model.fields,field_description:testapp.field_my_order__write_date
+#: model:ir.model.fields,field_description:testapp.field_my_orders_items__write_date
+msgid "Last Updated on"
+msgstr "اخر تعديل"
+
+#. module: testapp
+#: model:ir.ui.menu,name:testapp.testapp_menu_am_orders
+msgid "My Orders"
+msgstr "طلباتي"
+
+#. module: testapp
+#: model:ir.model.fields,field_description:testapp.field_my_app__name
+#: model:ir.model.fields,field_description:testapp.field_my_order__name
+#: model:ir.model.fields,field_description:testapp.field_my_orders_items__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: testapp
+#: model:ir.model.fields,field_description:testapp.field_my_orders_items__order_id
+msgid "Order"
+msgstr "الطلب"
+
+#. module: testapp
+#: model:ir.actions.act_window,name:testapp.testapp_orders_action_window
+#: model:ir.ui.menu,name:testapp.testapp_menu_am_order_list
+msgid "Orders"
+msgstr "الطلبات"
+
+#. module: testapp
+#: model:ir.model.fields,field_description:testapp.field_my_orders_items__qty
+msgid "Qty"
+msgstr "الكمية"
+
+#. module: testapp
+#: model_terms:ir.ui.view,arch_db:testapp.testapp_am_list
+msgid "Salary"
+msgstr "المرتب"
+
+#. module: testapp
+#: model_terms:ir.ui.view,arch_db:testapp.testapp_am_list
+msgid "Salary Sum"
+msgstr "مجموع المرتبات"
+
+#. module: testapp
+#: model:ir.model.fields,field_description:testapp.field_my_app__selection
+msgid "Selection"
+msgstr "اختيار"
+
+#. module: testapp
+#: model:ir.model.fields,field_description:testapp.field_my_app__trueFalse
+msgid "Truefalse"
+msgstr "صح او خطا"
+
+#. module: testapp
+#: model:ir.model.fields,field_description:testapp.field_my_app__value
+msgid "Value"
+msgstr "قيمة"
+
+#. module: testapp
+#: model:ir.model.fields,field_description:testapp.field_my_app__value2
+msgid "Value2"
+msgstr "قيمة 2"
+
+#. module: testapp
+#: model:ir.actions.act_window,name:testapp.testapp_almohamady_action_window
+#: model:ir.ui.menu,name:testapp.testapp_am_menu_root
+msgid "almohamady"
+msgstr "المحمدي"
+
+#. module: testapp
+#: model:ir.ui.menu,name:testapp.testapp_menu_am_main
+msgid "mohamady main"
+msgstr "المحمدي الرئيسية"
+
+#. module: testapp
+#: model:ir.model,name:testapp.model_my_order
+msgid "my.order"
+msgstr "طلباتي"
+
+#. module: testapp
+#: model:ir.model,name:testapp.model_my_orders_items
+msgid "my.orders.items"
+msgstr "اغراض طلباتي"
+
+#. module: testapp
+#: model:ir.model.fields.selection,name:testapp.selection__my_app__selection__1
+msgid "val1"
+msgstr "قيمة1"
+
+#. module: testapp
+#: model:ir.model.fields.selection,name:testapp.selection__my_app__selection__2
+msgid "val2"
+msgstr "قيمة2"
+
+#. module: testapp
+#: model:ir.model.fields.selection,name:testapp.selection__my_app__selection__3
+msgid "val3"
+msgstr "قيمة3"

@@ -1,0 +1,79 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="testapp_am_list">
+      <field name="name">alMohamady List</field>
+      <field name="model">my.app</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value" string="Salary" sum="Salary Sum" decoration-bf="10"/>
+          <field name="value2"/>
+          <field name="description"/>
+          <field name="trueFalse"/>
+          <field name="html"/>
+          <field name="date" />
+          <field name="date_time" />
+          <field name="binary"/>
+          <field name="selection"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="testapp_almohamady_action_window">
+      <field name="name">almohamady</field>
+      <field name="res_model">my.app</field>
+      <field name="view_mode">tree,form,kanban,pivot,graph</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="testapp_orders_action_window">
+      <field name="name">Orders</field>
+      <field name="res_model">my.order</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="testapp_item_action_window">
+      <field name="name">Items</field>
+      <field name="res_model">my.orders.items</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="testapp.action_server">
+      <field name="name">testapp server</field>
+      <field name="model_id" ref="model_testapp_testapp"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+
+    <menuitem name="almohamady" id="testapp_am_menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="mohamady main" id="testapp_menu_am_main" parent="testapp_am_menu_root"
+          action="testapp_almohamady_action_window"/>
+    <menuitem name="My Orders" id="testapp_menu_am_orders" parent="testapp_am_menu_root"/>
+
+    <!-- actions -->
+
+    <menuitem name="Orders" id="testapp_menu_am_order_list" parent="testapp_menu_am_orders"
+              action="testapp_orders_action_window"/>
+    <menuitem name="Items" id="testapp_menu_am_order_item_list" parent="testapp_menu_am_orders"
+              action="testapp_item_action_window"/>
+
+  </data>
+</odoo>

@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_jaffar_module_room_user,access.jaffar_module_room,model_jaffar_module_room,base.group_user,1,1,1,1
+access_jaffar_module_location_user,access.jaffar_module_location,model_jaffar_module_location,base.group_user,1,1,1,1
+access_jaffar_module_course_user,access.jaffar_module_course,model_jaffar_module_course,base.group_user,1,1,1,1
+

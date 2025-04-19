@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Main Menu -->
+        <menuitem
+            id="jaffar_module_menu_root"
+            name="JaffarModule"
+            sequence="0"
+        />
+    <!-- Main Menu -->
+
+    <!-- Sub Menus -->
+        <menuitem
+            id="jaffar_module_menu_registration"
+            name="Registration"
+            sequence="1"
+            parent="jaffar_module_menu_root"
+        />
+
+        <menuitem
+            id="jaffar_module_menu_courses"
+            name="Courses"
+            sequence="2"
+            parent="jaffar_module_menu_root"
+            action="jaffar_module_action_course"
+        />
+
+        <menuitem
+            id="jaffar_module_menu_location"
+            name="Location"
+            sequence="3"
+            parent="jaffar_module_menu_root"
+            action="jaffar_module_action_location"
+        />
+
+        <menuitem
+            id="jaffar_module_menu_room"
+            name="Room"
+            sequence="4"
+            parent="jaffar_module_menu_root"
+            action="jaffar_module_action_room"
+        />
+
+        <menuitem
+            id="jaffar_module_menu_teachers"
+            name="Teachers"
+            sequence="5"
+            parent="jaffar_module_menu_root"
+        />
+
+        <menuitem
+            id="jaffar_module_menu_my_training_courses"
+            name="My Training Courses"
+            sequence="6"
+            parent="jaffar_module_menu_root"
+        />
+    <!-- Sub Menus -->
+</odoo>

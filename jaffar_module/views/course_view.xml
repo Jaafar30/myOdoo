@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Course Action -->
+    <record id="jaffar_module_action_course" model="ir.actions.act_window">
+      <field name="name">Courses</field>
+      <field name="res_model">jaffar_module.course</field>
+      <field name="view_mode">list,form</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,11 @@
+ git clone https://github.com/odoo/odoo.git --single-branch -b 17.0 --depth 1 odoo17
+
+> pip install setuptools wheel
+
+> pip install -r requirements.txt
+
+ git clone https://github.com/odoo/odoo.git --single-branch -b 18.0 --depth 1 odoo18
+
+ python odoo-bin scaffold JaffarModule C:\Users\jaafa\Desktop\Odoo3\odoo18sdk\projects\addons 
+
+

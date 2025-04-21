@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Main Menu -->
+        <menuitem
+            id="menu_training_root"
+            name="Training"
+            sequence="3"
+        />
+    <!-- Main Menu -->
+
+    <!-- Sub Menus -->
+        <menuitem
+            id="menu_training_room"
+            name="Room"
+            parent="menu_training_root"
+            action="training_action_room"
+            sequence="1"
+        />
+
+        <menuitem
+            id="menu_training_location"
+            name="Location"
+            parent="menu_training_root"
+            action="training_action_location"
+            sequence="2"
+        />
+
+        <menuitem
+            id="menu_training_course"
+            name="Course"
+            parent="menu_training_root"
+            action="training_action_course"
+            sequence="3"
+        />
+
+        <menuitem
+            id="menu_training_registration"
+            name="Registration"
+            parent="menu_training_root"
+            action="training_action_registration"
+            sequence="4"
+        />
+
+    
+    <!-- Sub Menus -->
+</odoo>

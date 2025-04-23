@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!-- REPORT TEMPLATE -->
+    <template id="trainee_registration_report">
+        <t t-call="web.html_container">
+        <t t-call="web.basic_layout">
+
+            <t t-foreach="docs" t-as="doc">
+                    <div class="page" style="width: 100%; padding: 20px;">
+                        <style>
+                            .mytable {
+                                width: 100%;
+                                border-collapse: collapse;
+                                text-align: center;
+                                margin: 0 auto;
+                                border: 1px solid white;
+                            }
+
+                            .mytable2 {
+                                width: 100%; 
+                                border: 1px solid black;
+                                border-collapse: collapse;
+                                text-align: center;
+                                margin: 0 auto; 
+                            }
+
+                            .mytd {
+                                border: 1px solid black; 
+                                padding: 8px;
+                            }
+
+                            .mycol {
+                                background-color: rgba(217, 216, 215, 0.66);
+                                text-align: left;
+                                vertical-align: top;
+                                padding: 10px 15px; 
+                            }
+
+                            .mysecondcol {
+                                text-align: center;
+                                vertical-align: middle;
+                                padding: 8px;
+                            }
+
+                            .header-content {
+                                text-align: center;
+                                margin-bottom: 20px;
+                            }
+
+                        </style>
+                        <header style="margin-top: 0; padding-top: 0;">
+                            <div class="d-flex justify-content-between m-0" style="margin: 0;">
+                                <div class="m-0" style="margin: 0;">
+                                    <h6 class="m-0" style="margin: 0;">Company Logo</h6>
+                                </div>
+                                <div class="m-0" style="margin: 0;">
+                                    <h6 class="m-0" style="margin: 0;"><span t-esc="datetime.datetime.today().strftime('%d/%m/%Y')"/></h6>
+                                </div>
+                            </div>
+                        </header>
+
+
+                        
+
+                        <hr style="height: 2px; background-color: purple; border: none;" />
+                        <div style='height:40px;' /> <!-- Spacer -->
+                        <!-- Centered Header -->
+                        <div style='height:100px;' />
+                        <div class="header-content">
+                            <h4>Internal Training Details</h4>
+                        </div>
+                        <div style='height:100px;' />
+
+                        <div style='height:20px;' /> <!-- Spacer -->
+
+                        
+                        <table class="mytable">
+                            <tbody>
+                                <tr>
+                                    <td colspan="2"><h6>Trainee Name: <span t-field="doc.trainee_id" /></h6></td>
+                                    <td colspan="2"> <h6>Job Position: <span t-field="doc.trainee_id.job_id" /></h6></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div style='height:20px;' /> 
+
+                        <!-- Table -->
+                        <table class="mytable2">
+                            <tbody>
+                                <tr>
+                                    <td class='mycol mytd'>Serial Number:</td>
+                                    <td colspan="3" class="mysecondcol mytd"><span t-field="doc.serial_number" /></td>
+                                </tr>
+                                <tr>
+                                    <td class='mycol mytd'>Course Name:</td>
+                                    <td colspan="3" class="mysecondcol mytd"><span t-field="doc.course_id" /></td>
+                                </tr>
+                                <tr>
+                                    <td class='mycol mytd'>Course Description:</td>
+                                    <td colspan="3" class="mysecondcol mytd"><span t-field="doc.course_id.description" /></td>
+                                </tr>
+                                <tr>
+                                    <td class='mycol mytd'>Teacher Name:</td>
+                                    <td class="mysecondcol mytd"><span t-field="doc.course_id.teacher_id" /></td>
+                                    <td class='mycol mytd'>Time:</td>
+                                    <td class="mysecondcol mytd"><span t-field="doc.course_id.start_time" /> - <span t-field="doc.course_id.end_time" /></td>
+                                </tr>
+                                <tr>
+                                    <td class='mycol mytd'>Start Date:</td>
+                                    <td class="mysecondcol mytd"><span t-field="doc.course_id.start_date" /></td>
+                                    <td class='mycol mytd'>End Date:</td>
+                                    <td class="mysecondcol mytd"><span t-field="doc.course_id.end_date" /></td>
+                                </tr>
+                                <tr>
+                                    <td class='mycol mytd'>Room Number:</td>
+                                    <td class="mysecondcol mytd">
+                                        <t t-foreach="doc.course_id.room_ids" t-as="room" t-enumerate="True">
+                                            <span>
+                                                <span t-field="room.name" />
+                                                <t t-if="room_index + 1 != len(doc.course_id.room_ids)">
+                                                    <span>,</span>
+                                                </t>
+                                            </span>
+                                        </t>
+                                    </td>
+                                    <td class='mycol mytd'>Course Location:</td>
+                                    <td class="mysecondcol mytd">
+                                        <t t-foreach="doc.course_id.room_ids" t-as="room" t-enumerate="True">
+                                            <span>
+                                                <span t-field="room.location_id.name" />
+                                                <t t-if="room_index + 1 != len(doc.course_id.room_ids)">
+                                                    <span>,</span>
+                                                </t>
+                                            </span>
+                                        </t>
+                                    </td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+
+                        <div style='height:100px;' />
+
+                    </div>
+                
+            </t>
+            <t t-set="current_page" t-value="1" />
+            <t t-set="length" t-value="len(docs)" />
+            <div style="text-align: right;">
+                <div style='height:550px;' />
+                <span>Page <t t-esc="current_page"/> of <t t-esc="length"/></span>
+            </div>
+
+             <t t-set="current_page" t-value="current_page + 1"/>
+
+
+        </t>
+        </t>
+    </template>
+
+<!-- REPORT ACTION -->
+<record id="trainee_registration_report_action" model="ir.actions.report">
+    <field name="name">Trainee Report</field>
+    <field name="model">training.registration</field>
+    <field name="report_type">qweb-pdf</field>
+    <field name="report_name">training.trainee_registration_report</field>
+    <field name="report_file">training.trainee_registration_report</field>
+    <field name="print_report_name">'Trainee Report'</field>
+    <field name="binding_model_id" ref="model_training_registration"/>
+    <field name="binding_type">report</field>
+</record>
+
+
+</odoo>

@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_training_room_hr,access.training.room.hr,model_training_room,training.group_training_hr,1,1,1,1
+access_training_location_hr,access.training.location.hr,model_training_location,training.group_training_hr,1,1,1,1
+access_training_course_hr,access.training.course.hr,model_training_course,training.group_training_hr,1,1,1,1
+access_training_registration_requester,access.training.registration.requester,model_training_registration,training.group_training_requester,1,1,1,0
+access_training_course_requester,access.training.course.requester,model_training_course,training.group_training_requester,1,1,0,0
+access_training_room_requester,access.training.room.requester,model_training_room,training.group_training_requester,1,0,0,0
+access_training_location_requester,access.training.location.requester,model_training_location,training.group_training_requester,1,0,0,0

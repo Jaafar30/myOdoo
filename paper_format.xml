@@ -1,0 +1,47 @@
+<odoo>
+    <data noupdate="1">
+
+        <record id="qr_stickers_paperformat" model="report.paperformat">
+            <field name="name">QR Stickers</field>
+            <field name="format">custom</field>
+            <field name="page_height">32</field>
+            <field name="page_width">32</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">2</field>
+            <field name="margin_bottom">0</field>
+            <field name="margin_left">0</field>
+            <field name="margin_right">0</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">5</field>
+            <field name="dpi">90</field>
+        </record>
+
+
+        <record id="nipt_results_paperformat" model="report.paperformat">
+            <field name="name">NIPT Results</field>
+            <field name="format">A4</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">22</field>
+            <field name="margin_bottom">5</field>
+            <field name="margin_left">3</field>
+            <field name="margin_right">3</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">20</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <record id="lab_hereditary_cancer_paperformat" model="report.paperformat">
+            <field name="name">Lab Hereditary Cancer  Results</field>
+            <field name="format">A4</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">35</field>
+            <field name="margin_bottom">15</field>
+            <field name="margin_left">3</field>
+            <field name="margin_right">3</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">25</field>
+            <field name="dpi">90</field>
+        </record>
+
+    </data>
+</odoo>

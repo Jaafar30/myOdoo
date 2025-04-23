@@ -1,0 +1,6 @@
+http://localhost:8069/report/pdf/training.trainee_registration_report/5
+
+http://localhost:8069/report/html/training.trainee_registration_report/5
+
+
+

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Presales Action -->
+    <data noupdate="1">
+    
+        <record id="presales_action" model="ir.actions.act_window">
+            <field name="name">Presales</field>
+            <field name="res_model">presales.matrix</field>
+            <field name="view_mode">tree,form</field>
+        </record>   
+    
+    </data>
+    
+    <!-- Presales Action -->
+
+    <!-- presales tree -->
+    <record model="ir.ui.view" id="oi_crm_presales_matrix_tree">
+        <field name="name">Presales Matrix Tree</field>
+        <field name="model">presales.matrix</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="region_id"/>
+                <field name="town_name"/>
+                <field name="early_engagement"/>
+                <field name="estimated_budget"/>
+                <field name="esstimated_budget_specify"/>
+                <field name="invitation"/>
+                <field name="protected_vendor"/>
+                <field name="protected_technology"/>
+                <field name="is_relation_with_vendor"/>
+                <field name="vendor_name"/>
+                <field name="high_competition"/>
+                <field name="high_competition_specify"/>
+                <field name="is_relation_with_customer"/>
+                <field name="customer_partner"/>
+                <field name="visibility"/>
+                <field name="clear_customer_needs"/>
+                <field name="overall_risk"/>
+                <field name="professional_service"/>
+                <field name="majority_or_minority_service"/>
+                <field name="is_service"/>
+                <field name="opportunity_exist"/>
+                <field name="presales_request_no"/>
+            </tree>
+        </field>
+    </record>
+    <!-- presales tree -->
+
+    <!-- presales form -->
+    <record model="ir.ui.view" id="oi_crm_presales_matrix_form">
+        <field name="name">Presales Matrix Form</field>
+        <field name="model">presales.matrix</field>
+        <field name="arch" type="xml">
+            <form string="Presales Matrix">
+                <sheet>
+                    <!-- 1 -->
+                        <group >
+                            <group>
+                                <field name="fit_to_is_business"/>
+                            </group>
+                            <group>
+                                
+                            </group> 
+                        </group>
+                        <!-- 1 -->
+
+                        <!-- 2 -->
+                        <group>
+                            <group>
+                                <field name="region_id"/>
+                            </group>
+                            <group>
+                                <field name="town_name" string='' placeholder="Please specify town name"/>
+                            </group> 
+                        </group>
+                        <!-- 2 -->
+
+                        <!-- 3 -->
+                        <group>
+                            <group>
+                                <field name="early_engagement"/>
+                            </group>
+                            <group>
+                                
+                            </group> 
+                        </group>
+                        <!-- 3 -->
+
+                        <!-- 4 -->
+                        <group>
+                            <group>
+                               <field name="estimated_budget"/>
+                            </group>
+                            <group>
+                                <field name="esstimated_budget_specify" string=''  placeholder="Please specify" attrs="{
+                                'invisible': [('estimated_budget', '!=', 'yes')],
+                                'required': [('estimated_budget', '=', 'yes')]
+                            }"/>
+                            </group> 
+                        </group>
+                        <!-- 4 -->
+
+                        <!-- 5 -->
+                        <group>
+                            <group>
+                                <field name="invitation"/>
+                            </group>
+                            <group>
+                                
+                            </group> 
+                        </group>
+                        <!-- 5 -->
+
+                        <!-- 6 -->
+                        <group>
+                            <group>
+                                <field name="protected_vendor"/>
+                            </group>
+                            <group>
+                                <field name="protected_technology"  string='' placeholder="In which technologies"/>
+                            </group> 
+                        </group>
+                        <!-- 6 -->
+
+                        <!-- 7 -->
+                        <group>
+                            <group>
+                                <field name="is_relation_with_vendor"/>
+                            </group>
+                            <group>
+                                <field name="vendor_name" string=''  placeholder="Please specify vendor name or customer preferred vendor"/>
+                            </group> 
+                        </group>
+                        <!-- 7 -->
+
+                        <!-- 8 -->
+                        <group>
+                            <group>
+                                <field name="high_competition"/>
+                            </group>
+                            <group>
+                                <field name="high_competition_specify" string=''  placeholder="Please specify" attrs="{
+                                'invisible': [('high_competition', '!=', 'yes')],
+                                'required': [('high_competition', '=', 'yes')]
+                            }"/>
+                            </group> 
+                        </group>
+                        <!-- 8 -->
+
+                        <!-- 9 -->
+                        <group>
+                            <group>
+                                <field name="is_relation_with_customer"/>
+                            </group>
+                            <group>
+                                <field name="customer_partner" string=''  placeholder="Please specify customer existing partner"/>
+                            </group> 
+                        </group>
+                        <!-- 9 -->
+
+                        <!-- 10 -->
+                        <group>
+                            <group>
+                                <field name="visibility"/>
+                            </group>
+                            <group>
+                                
+                            </group> 
+                        </group>
+                        <!-- 10 -->
+
+                        <!-- 11 -->
+                        <group>
+                            <group>
+                                <field name="clear_customer_needs"/>
+                            </group>
+                            <group>
+                                
+                            </group> 
+                        </group>
+                        <!-- 11 -->
+
+                        <!-- 12 -->
+                        <group>
+                            <group>
+                                <field name="overall_risk"/>
+                            </group>
+                            <group>
+                                
+                            </group> 
+                        </group>
+                        <!-- 12 -->
+
+                        <!-- 13 -->
+                        <group>
+                            <group>
+                                <field name="professional_service"/>
+                            </group>
+                            <group>
+                                <field name="majority_or_minority_service" string=''  placeholder="Majority or minority of the service"/>
+                            </group> 
+                        </group>
+                        <!-- 13 -->
+
+                        <!-- 14 -->
+                        <group>
+                            <group>
+                                <field name="is_service"/>
+                            </group>
+                            <group>
+                                
+                            </group> 
+                        </group>
+                        <!-- 14 -->
+
+                        <!-- 15 -->
+                        <group>
+                            <group>
+                                <field name="opportunity_exist"/>
+                            </group>
+                            <group>
+                                <field name="presales_request_no" string='' placeholder="Presales Request No." attrs="{
+                                'invisible': [('opportunity_exist', '!=', 'yes')],
+                                'required': [('opportunity_exist', '=', 'yes')]
+                                }"/>
+                            </group> 
+                        </group>
+                        <!-- 15 -->
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- presales form -->
+
+</odoo>

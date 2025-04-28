@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Main Menu -->
+        <menuitem
+            id="crm_presales_matrix_menu"
+            name="CRM Presales Matrix"
+            sequence="10"
+        />
+    <!-- Main Menu -->
+
+    <!-- Sub Menu -->
+        <menuitem
+            id="presales_menu"
+            name="Presales"
+            parent="crm_presales_matrix_menu"
+            sequence="1"
+            action="presales_action"
+        />
+    <!-- Sub Menu -->
+</odoo>

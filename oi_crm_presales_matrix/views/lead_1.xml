@@ -1,0 +1,110 @@
+<odoo>
+    <record id="inherit_lead" model="ir.ui.view">
+        <field name="name">presales_matrix.crm.lead</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook//page[@name='lead']" position="after">
+                <page string="Presales Matrix">
+                    <div class="container-fluid">
+                        <!-- Table with Bootstrap's small table class -->
+                        <table class="table table-sm table-bordered table-hover">
+                            <tbody>
+                                <!-- 1 -->
+                                <tr>
+                                    <td class="text-center no-padding"><b>Fit to IS Business</b></td>
+                                    <td><field name="fit_to_is_business" widget="selection" class="form-control form-control-sm w-100" /></td>
+                                    <td></td>
+                                </tr>
+                                <!-- 2 -->    
+                                <tr>
+                                    <td class="text-center no-padding"><b>Region</b></td>
+                                    <td><field name="region_id" widget="selection" class="form-control form-control-sm w-100" /></td>
+                                    <td><field name="town_name" widget="char" class="form-control form-control-sm w-100" placeholder="Please specify town name" /></td>
+                                </tr>
+                                <!-- 3 -->    
+                                <tr>
+                                    <td class="text-center no-padding"><b>Early engagement</b></td>
+                                    <td><field name="early_engagement" widget="selection" class="form-control form-control-sm w-100" /></td>
+                                    <td></td>
+                                </tr>
+                                <!-- 4 -->    
+                                <tr>
+                                    <td class="text-center no-padding"><b>Do we have an estimated budget</b></td>
+                                    <td><field name="estimated_budget" widget="selection" class="form-control form-control-sm w-100" /></td>
+                                    <td><field name="esstimated_budget_specify" class="form-control form-control-sm w-100" placeholder="Please Specify" attrs="{'invisible': [('estimated_budget', '!=', 'yes')], 'required': [('estimated_budget', '=', 'yes')] }"/></td>
+                                </tr>
+                                <!-- 5 -->    
+                                <tr>
+                                    <td class="text-center no-padding"><b>Direct / Public invitation</b></td>
+                                    <td><field name="invitation" widget="selection" class="form-control form-control-sm w-100" /></td>
+                                    <td></td>
+                                </tr>
+                                <!-- 6 -->
+                                <tr>
+                                    <td class="text-center no-padding"><b>Are we protected by vendor</b></td>
+                                    <td><field name="protected_vendor" widget="selection" class="form-control form-control-sm w-100" /></td>
+                                    <td><field name="protected_technology" class="form-control form-control-sm w-100" placeholder="In which technologies" /></td>
+                                </tr>
+                                <!-- 7 -->    
+                                <tr>
+                                    <td class="text-center no-padding"><b>IS relation with vendor/s</b></td>
+                                    <td><field name="is_relation_with_vendor" widget="selection" class="form-control form-control-sm w-100" /></td>
+                                    <td><field name="vendor_name" placeholder="Please specify vendor name or customer preferred vendor" class="form-control form-control-sm w-100" /></td>
+                                </tr>
+                                <!-- 8 -->    
+                                <tr>
+                                    <td class="text-center no-padding"><b>High Competition</b></td>
+                                    <td><field name="high_competition" widget="selection" class="form-control form-control-sm w-100" /></td>
+                                    <td><field name="high_competition_specify" class="form-control form-control-sm w-100" placeholder="Please Specify" attrs="{'invisible': [('high_competition', '!=', 'yes')], 'required': [('high_competition', '=', 'yes')] }"/></td>
+                                </tr>
+                                <!-- 9 -->    
+                                <tr>
+                                    <td class="text-center no-padding"><b>IS relation with the customer</b></td>
+                                    <td><field name="is_relation_with_customer" widget="selection" class="form-control form-control-sm w-100" /></td>
+                                    <td><field name="customer_partner" class="form-control form-control-sm w-100" placeholder="Please specify customer Existing partner" /></td>
+                                </tr>        
+                                <!-- 10 -->    
+                                <tr>
+                                    <td class="text-center no-padding"><b>Do we have a good visibility/Insight</b></td>
+                                    <td><field name="visibility" widget="selection" class="form-control form-control-sm w-100" /></td>
+                                    <td></td>
+                                </tr>
+                                <!-- 11 -->    
+                                <tr>
+                                    <td class="text-center no-padding"><b>Clear Customer needs</b></td>
+                                    <td><field name="clear_customer_needs" widget="selection" class="form-control form-control-sm w-100" /></td>
+                                    <td></td>
+                                </tr>
+                                <!-- 12 -->    
+                                <tr>
+                                    <td class="text-center no-padding"><b>Overall risk</b></td>
+                                    <td><field name="overall_risk" widget="selection" class="form-control form-control-sm w-100" /></td>
+                                    <td></td>
+                                </tr>
+                                <!-- 13 -->    
+                                <tr>
+                                    <td class="text-center no-padding"><b>Professional Service</b></td>
+                                    <td><field name="professional_service" widget="selection" class="form-control form-control-sm w-100" /></td>
+                                    <td><field name="majority_or_minority_service" placeholder="Majority or minority of the service" class="form-control form-control-sm w-100" /></td>
+                                </tr>
+                                <!-- 14 -->    
+                                <tr>
+                                    <td class="text-center no-padding"><b>IS Services (MSS / Advisory)</b></td>
+                                    <td><field name="is_service" widget="selection" class="form-control form-control-sm w-100" /></td>
+                                    <td></td>
+                                </tr>
+                                <!-- 15 -->    
+                                <tr>
+                                    <td class="text-center no-padding"><b>Opportunity Exists on CRM</b></td>
+                                    <td><field name="opportunity_exist" widget="selection" class="form-control form-control-sm w-100" /></td>
+                                    <td><field name="presales_request_no" class="form-control form-control-sm w-100" placeholder="Presales Request No." attrs="{'invisible': [('opportunity_exist', '!=', 'yes')], 'required': [('opportunity_exist', '=', 'yes')] }"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

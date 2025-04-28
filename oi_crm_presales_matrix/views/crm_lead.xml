@@ -1,0 +1,59 @@
+<odoo>
+    <record id="inherit_lead" model="ir.ui.view">
+        <field name="name">presales_matrix.crm.lead</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook//page[@name='lead']" position="after">
+                <page string="Presales Matrix">
+                    <div class="container-fluid">
+                        <!-- Table with Bootstrap's small table class -->
+                        <table class="table table-sm table-bordered" style="border-color: black;">
+                            <tbody>
+                                <!--   -->
+                                <tr>
+                                    <td class="text-center no-padding" style="background-color:#305496; color:white; border: 1px solid black;"></td>
+                                    <td class="text-center no-padding" style="background-color:#d9e1f2; color:black; border: 1px solid black;"><b>Scope Clarity</b><br/><b>Sales AM must brief customer requirement in this field</b></td>
+                                    <td class="text-center no-padding" style="background-color:white; color:white; border: 1px solid black;"><b></b></td>
+                                    <td class="text-center no-padding" style="background-color:white; color:white; border: 1px solid black;"><b></b></td>
+                                    <td class="text-center no-padding" style="background-color:#305496; color:white; border: 1px solid black;"></td>
+                                </tr>
+                                <!-- Inqueries Row -->
+                                <tr>
+                                    <td class="text-center " style="background-color:#305496; color:white; border: 1px solid black;">#</td>
+                                    <td class="text-center no-padding" style="background-color:#305496; color:white; border: 1px solid black;"><b>Inquiries</b></td>
+                                    <td class="text-center no-padding" style="background-color:#305496; color:white; border: 1px solid black;"><b>Answer</b></td>
+                                    <td class="text-center no-padding" style="background-color:#305496; color:white; border: 1px solid black;"><b>Sales AM Comments</b></td>
+                                    <td class="text-center no-padding" style="background-color:#305496; color:white; border: 1px solid black;"></td>
+                                </tr>
+                                <!-- 1 -->
+                                <tr>
+                                    <td class="text-center " style="background-color:#305496; color:white; border: 1px solid black;">1</td>
+                                    <td class="text-center no-padding" style="background-color:#d9e1f2; border: 1px solid black; color:black"><b>Fit to IS Business</b></td>
+                                    <td style="border: 1px solid black;"><field name="fit_to_is_business" widget="selection" class="form-control form-control-sm w-100" /></td>
+                                    <td style="border: 1px solid black;"></td>
+                                    <td class="text-center no-padding" style="background-color:#305496; color:white; border: 1px solid black;"></td>
+                                </tr>
+                                <!-- 2 -->    
+                                <tr>
+                                    <td class="text-center " style="background-color:#305496; color:white; border: 1px solid black;">2</td>
+                                    <td class="text-center no-padding"  style="background-color:#d9e1f2; border: 1px solid black; color:black"><b>Region</b></td>
+                                    <td style="border: 1px solid black;"><field name="region_id" widget="selection" class="form-control form-control-sm w-100" /></td>
+                                    <td style="border: 1px solid black;"><field name="town_name" widget="char" class="form-control form-control-sm w-100" placeholder="Please specify town name" /></td>
+                                    <td class="text-center no-padding" style="background-color:#305496; color:white; border: 1px solid black;"></td>
+                                </tr>
+                                <tr style="height:15px">
+                                    <td class="text-center no-padding" style="background-color:#305496; color:white; border: 1px solid black;"></td>
+                                    <td class="text-center no-padding" style="background-color:#305496; color:white; border: 1px solid black;"></td>
+                                    <td class="text-center no-padding" style="background-color:#305496; color:white; border: 1px solid black;"></td>
+                                    <td class="text-center no-padding" style="background-color:#305496; color:white; border: 1px solid black;"></td>
+                                    <td class="text-center no-padding" style="background-color:#305496; color:white; border: 1px solid black;"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
